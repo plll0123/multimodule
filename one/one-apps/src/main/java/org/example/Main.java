@@ -1,12 +1,10 @@
 package org.example;
 
-import org.example.board.config.BoardDomainConfig;
-import org.example.member.rds.MemberDomainConfig;
+import org.example.infra.OneConfigurationImportSelector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
-@Import({MemberDomainConfig.class, BoardDomainConfig.class})
 @SpringBootApplication
 public class Main {
     public static void main(String[] args) {

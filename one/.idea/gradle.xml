@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -8,6 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/board" />
+            <option value="$PROJECT_DIR$/infra" />
             <option value="$PROJECT_DIR$/member" />
             <option value="$PROJECT_DIR$/member/member-apis" />
             <option value="$PROJECT_DIR$/member/member-app" />

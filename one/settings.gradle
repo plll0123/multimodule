@@ -10,4 +10,5 @@ include 'member:member-apis'
 findProject(':member:member-apis')?.name = 'member-apis'
 include 'one-apps'
 include 'board'
+include 'infra'
 
