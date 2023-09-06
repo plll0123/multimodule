@@ -1,2 +1,5 @@
 rootProject.name = 'one'
+include 'member'
+include 'member:member-domain-model'
+findProject(':member:member-domain-model')?.name = 'member-domain-model'
 
