@@ -1,3 +1,4 @@
 dependencies {
     implementation project(':member:member-apis')
+    implementation project(':board')
 }

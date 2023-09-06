@@ -3,6 +3,7 @@ package org.example.member.rds;
 import lombok.RequiredArgsConstructor;
 import org.example.member.domain.Member;
 import org.example.member.port.out.MemberRegisterGateWay;
+import org.example.member.rds.entity.MemberEntity;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,6 +17,6 @@ public class MemberRegisterRepository implements MemberRegisterGateWay {
 
     @Override
     public void save(final Member member) {
-        memberRepository.save(member);
+        memberRepository.save(new MemberEntity(member.loginId()));
     }
 }

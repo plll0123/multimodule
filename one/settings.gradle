@@ -9,4 +9,5 @@ findProject(':member:member-app')?.name = 'member-app'
 include 'member:member-apis'
 findProject(':member:member-apis')?.name = 'member-apis'
 include 'one-apps'
+include 'board'
 

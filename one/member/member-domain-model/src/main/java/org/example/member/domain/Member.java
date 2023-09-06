@@ -13,4 +13,16 @@ public class Member {
         this.id = null;
         this.loginId = new LoginId(loginId);
     }
+
+    public Member(final Long id, final String loginId) {
+        this.id = id;
+        this.loginId = new LoginId(loginId);
+    }
+    public String loginId() {
+        return loginId.loginId();
+    }
+
+    public Long id() {
+        return id;
+    }
 }
