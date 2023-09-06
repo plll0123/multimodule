@@ -6,6 +6,16 @@ group = 'org.example'
 version = '1.0-SNAPSHOT'
 
 allprojects {
+    apply plugin: 'java'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    javadoc {
+        destinationDir = file("${buildDir}/docs/javadoc")
+    }
+
     sourceCompatibility = '17'
     targetCompatibility = '17'
 
