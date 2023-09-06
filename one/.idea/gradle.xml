@@ -9,6 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/member" />
+            <option value="$PROJECT_DIR$/member/member-apis" />
+            <option value="$PROJECT_DIR$/member/member-app" />
+            <option value="$PROJECT_DIR$/member/member-domain-model" />
+            <option value="$PROJECT_DIR$/member/member-rds" />
           </set>
         </option>
       </GradleProjectSettings>
