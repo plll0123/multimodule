@@ -8,8 +8,20 @@ public class User {
     private final Avatar avatar;
 
     public User(String name, String nickname) {
-        this.id = null;
         this.name = new Name(name);
         this.avatar = new Avatar(nickname);
+        this.id = null;
+    }
+
+    public Long id() {
+        return id;
+    }
+
+    public Name name() {
+        return name;
+    }
+
+    public Avatar avatar() {
+        return avatar;
     }
 }
