@@ -1,5 +1,7 @@
 package org.example.domain.member;
 
+import org.example.domain.member.exception.UsernamePatternDoesntMatchException;
+
 import java.util.regex.Pattern;
 
 public class Name extends DomainValueObject {
@@ -9,7 +11,7 @@ public class Name extends DomainValueObject {
 
     public Name(final String name) {
         if (doesntMatch(USER_NAME_PATTERN, name)) {
-            throw new IllegalArgumentException("회원 이름 양식에 맞지 않습니다.");
+            throw new UsernamePatternDoesntMatchException("회원 이름 양식에 맞지 않습니다.");
         }
         this.name = name;
     }

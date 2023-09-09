@@ -7,8 +7,8 @@ public class User {
     private final Name name;
     private final Avatar avatar;
 
-    public User(String name, String nickname) {
-        this.name = new Name(name);
+    public User(final String username, final String nickname) {
+        this.name = new Name(username);
         this.avatar = new Avatar(nickname);
         this.id = null;
     }
