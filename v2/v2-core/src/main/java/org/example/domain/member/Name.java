@@ -1,5 +1,6 @@
 package org.example.domain.member;
 
+import org.example.domain.DomainValueObject;
 import org.example.domain.member.exception.UsernamePatternDoesntMatchException;
 
 import java.util.regex.Pattern;

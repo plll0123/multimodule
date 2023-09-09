@@ -1,4 +1,4 @@
-package org.example.domain.member;
+package org.example.domain;
 
 import java.util.regex.Pattern;
 

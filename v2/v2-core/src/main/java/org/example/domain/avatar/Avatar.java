@@ -1,7 +1,7 @@
 package org.example.domain.avatar;
 
 import org.example.domain.avatar.exception.NicknamePatternNotMatchesException;
-import org.example.domain.member.DomainValueObject;
+import org.example.domain.DomainValueObject;
 
 import java.util.regex.Pattern;
 

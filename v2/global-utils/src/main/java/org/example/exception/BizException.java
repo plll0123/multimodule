@@ -1,4 +1,4 @@
-package org.example;
+package org.example.exception;
 
 /**
  * BizException은 비즈니스 로직에서 발생하는 예외를 처리하기 위한 클래스입니다.
