@@ -1,4 +1,4 @@
-package org.example.domain.exception;
+package org.example;
 
 /**
  * BizException은 비즈니스 로직에서 발생하는 예외를 처리하기 위한 클래스입니다.
@@ -19,6 +19,18 @@ package org.example.domain.exception;
  *  * @since 2023-09-07
  */
 public class BizException extends RuntimeException {
+
+    public BizException() {
+    }
+
+    /**
+     * 예외 메시지를 지정할 수 있는 생성자입니다.
+     * 지정된 메시지는 예외를 처리하는 곳에서 사용됩니다.
+     * @param message
+     */
+    public BizException(String message) {
+        super(message);
+    }
 
     /**
      * 이 메소드는 성능 최적화를 위해 스택 트레이스를 채우지 않게 오버라이드 되었습니다.

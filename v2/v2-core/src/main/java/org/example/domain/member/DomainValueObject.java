@@ -1,6 +1,5 @@
 package org.example.domain.member;
 
-import java.util.Optional;
 import java.util.regex.Pattern;
 
 public class DomainValueObject {

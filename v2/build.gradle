@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'java-library'
 }
 
 group = 'org.example'
@@ -7,10 +8,7 @@ version = '1.0-SNAPSHOT'
 
 allprojects {
     apply plugin: 'java'
-
-    tasks.withType(JavaCompile) {
-        options.encoding = 'UTF-8'
-    }
+    apply plugin: 'java-library'
 
     javadoc {
         options.encoding = 'UTF-8'
@@ -24,11 +22,52 @@ allprojects {
         mavenCentral()
     }
 
-    dependencies {
-
-    }
-
     test {
         useJUnitPlatform()
     }
+
+
 }
+
+configure (subprojects.findAll {!it.name.endsWith('utils')}) {
+    dependencies {
+        implementation project(':global-utils')
+    }
+}
+//tasks.register("selfExclude") {
+//    def projectList = allprojects.iterator()
+//    while(projectList.hasNext()) {
+//        def myProject = projectList.next();
+//        if (myProject.name != 'global-utils') {
+//            dependencies {
+//                implementation project('global-utils')
+//            }
+//        }
+//    }
+//}
+
+//tasks.globalUtilsSetting {
+//    def projectIterator = allprojects.findAll().iterator();
+//    while (projectIterator.hasNext()){
+//        def next = projectIterator.next();
+//        if (next.name != 'global-utils') {
+//            dependencies {
+//                implementation project(':global-utils')
+//            }
+//        }
+//    }
+//}
+//
+//configure (allprojects) {
+//
+//    dependencies {
+//        compileOnly 'org.projectlombok:lombok:1.18.24'
+//
+//    }
+//}
+//
+//configure (subprojects.findAll { (it.name != "global-utils") }) {
+//    dependencies {
+//        implementation project(':global-utils:')
+//    }
+//}

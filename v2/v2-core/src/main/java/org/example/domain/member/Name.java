@@ -13,4 +13,8 @@ public class Name extends DomainValueObject {
         }
         this.name = name;
     }
+
+    public String name() {
+        return name;
+    }
 }
