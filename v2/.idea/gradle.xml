@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/global-utils" />
+            <option value="$PROJECT_DIR$/v2-core" />
           </set>
         </option>
       </GradleProjectSettings>
