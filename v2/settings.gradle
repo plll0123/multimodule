@@ -1,4 +1,5 @@
 rootProject.name = 'v2'
 include 'global-utils'
 include 'v2-core'
+include 'v2-apis'
 
