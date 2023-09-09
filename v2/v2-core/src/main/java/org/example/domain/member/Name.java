@@ -8,7 +8,7 @@ public class Name extends DomainValueObject {
             Pattern.compile("^[가-힣]{2,5}$");
 
     public Name(final String name) {
-        if (validRegxp(USER_NAME_PATTERN, name)) {
+        if (doesntMatch(USER_NAME_PATTERN, name)) {
             throw new IllegalArgumentException("회원 이름 양식에 맞지 않습니다.");
         }
         this.name = name;

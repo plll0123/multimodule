@@ -11,8 +11,8 @@ public class Avatar extends DomainValueObject {
     private static final Pattern NICKNAME_PATTERN =
             Pattern.compile("^[가-힣]{2,5}$");
 
-    public Avatar(String nickname) {
-        if (validRegxp(NICKNAME_PATTERN, nickname)) {
+    public Avatar(final String nickname) {
+        if (doesntMatch(NICKNAME_PATTERN, nickname)) {
             throw new NicknamePatternNotMatchesException("닉네임 규칙에 맞지 않습니다.");
         }
         this.nickname = nickname;

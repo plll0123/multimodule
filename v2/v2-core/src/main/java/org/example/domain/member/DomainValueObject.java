@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class DomainValueObject {
 
-    protected boolean validRegxp(Pattern pattern, String target) {
-        return pattern.matcher(target).matches();
+    protected boolean doesntMatch(Pattern pattern, String target) {
+        return !pattern.matcher(target).matches();
     }
 }
