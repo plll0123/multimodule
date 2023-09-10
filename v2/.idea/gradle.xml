@@ -12,6 +12,8 @@
             <option value="$PROJECT_DIR$/global-utils" />
             <option value="$PROJECT_DIR$/v2-apis" />
             <option value="$PROJECT_DIR$/v2-core" />
+            <option value="$PROJECT_DIR$/v2-core/article" />
+            <option value="$PROJECT_DIR$/v2-core/user" />
           </set>
         </option>
       </GradleProjectSettings>

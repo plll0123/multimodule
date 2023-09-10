@@ -2,4 +2,8 @@ rootProject.name = 'v2'
 include 'global-utils'
 include 'v2-core'
 include 'v2-apis'
+include 'v2-core:article'
+findProject(':v2-core:article')?.name = 'article'
+include 'v2-core:user'
+findProject(':v2-core:user')?.name = 'user'
 
