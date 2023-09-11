@@ -1,4 +1,3 @@
 dependencies {
     api project(':v2-core:user')
-    api project(':v2-core:article')
 }

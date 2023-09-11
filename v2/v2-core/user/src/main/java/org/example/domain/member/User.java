@@ -17,8 +17,8 @@ public class User {
         return id;
     }
 
-    public Name name() {
-        return name;
+    public String name() {
+        return name.name();
     }
 
     public Avatar avatar() {

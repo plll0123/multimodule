@@ -1,5 +1,8 @@
+bootJar.enabled = true
+
 jar.enabled = false
 
 dependencies {
-    implementation project(':v2-core')
+    api project(':v2-core')
+    implementation project(':v2-gateway')
 }
