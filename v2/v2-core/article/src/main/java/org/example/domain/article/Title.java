@@ -1,7 +1,5 @@
 package org.example.domain.article;
 
-import org.example.domain.DomainValueObject;
-
 import java.util.regex.Pattern;
 
 public class Title extends DomainValueObject {

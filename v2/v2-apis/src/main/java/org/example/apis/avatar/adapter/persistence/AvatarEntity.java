@@ -1,6 +1,8 @@
 package org.example.apis.avatar.adapter.persistence;
 
 import jakarta.persistence.*;
+import org.example.domain.avatar.Avatar;
+import org.example.domain.avatar.Nickname;
 
 @Entity
 @Table(name = "avatar")
@@ -20,5 +22,9 @@ public class AvatarEntity {
 
     public AvatarEntity(String nickname) {
         this.nickname = nickname;
+    }
+
+    public Avatar toDomain() {
+        return Avatar.of(id, new Nickname(nickname));
     }
 }

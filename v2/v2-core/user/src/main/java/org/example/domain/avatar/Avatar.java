@@ -1,17 +1,16 @@
 package org.example.domain.avatar;
 
 import org.example.domain.avatar.exception.NicknamePatternNotMatchesException;
-import org.example.domain.DomainValueObject;
 
 import java.util.regex.Pattern;
 
 /**
  *
  */
-public class Avatar extends DomainValueObject {
+public class Avatar {
 
     private final Long id;
-    private final String nickname;
+    private final Nickname nickname;
     private static final Pattern NICKNAME_PATTERN =
             Pattern.compile("^[가-힣]{2,5}$");
 
@@ -23,19 +22,25 @@ public class Avatar extends DomainValueObject {
      *                 닉네임은 2~5글자의 한글로 구성되어야 합니다.
      * @throws NicknamePatternNotMatchesException 닉네임이 규칙에 맞지 않을 때 발생하는 예외입니다.
      */
-    public Avatar(final String nickname) {
-        if (doesntMatch(NICKNAME_PATTERN, nickname)) {
-            throw new NicknamePatternNotMatchesException("닉네임 규칙에 맞지 않습니다.");
-        }
+    public Avatar(final Nickname nickname) {
         this.nickname = nickname;
         this.id = null;
+    }
+
+    private Avatar(final Long id, final Nickname nickname) {
+        this.id = id;
+        this.nickname = nickname;
+    }
+
+    public static Avatar of(Long id, Nickname nickname) {
+        return new Avatar(id, nickname);
     }
 
     public Long id() {
         return id;
     }
 
-    public String nickname() {
+    public Nickname nickname() {
         return nickname;
     }
 }

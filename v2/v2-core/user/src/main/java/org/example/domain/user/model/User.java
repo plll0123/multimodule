@@ -12,14 +12,28 @@ public class User {
     private final Password password;
     private final Avatar avatar;
 
-    public User(final String name, final String nickname, final String loginId, final String password) {
-        this.name = new Name(name);
-        this.avatar = new Avatar(nickname);
-        this.loginId = new LoginId(loginId);
-        this.password = new Password(password);
+    public User(final Name name, final Avatar avatar, final LoginId loginId, final Password password) {
+        this.name = name;
+        this.avatar = avatar;
+        this.loginId = loginId;
+        this.password = password;
         this.id = null;
     }
 
+    private User(final Long id, final String name, final String loginId, final String password, final Avatar avatar) {
+        this.id = id;
+        this.name = Name.of(name);
+        this.loginId = LoginId.of(loginId);
+        this.password = Password.of(password);
+        this.avatar = avatar;
+    }
+    public static User of(final Long id, final String name, final String loginId, final String password, final Avatar avatar) {
+        return new User(id, name, loginId, password, avatar);
+    }
+
+    public boolean isMatchPassword(final Password other) {
+        return other.password().equalsIgnoreCase(this.password.password());
+    }
     public Long id() {
         return id;
     }
@@ -32,11 +46,12 @@ public class User {
         return avatar;
     }
 
-    public LoginId loginId() {
-        return loginId;
+    public String loginId() {
+        return loginId.loginId();
     }
 
-    public Password password() {
-        return password;
+    public String password() {
+        return password.password();
     }
+
 }

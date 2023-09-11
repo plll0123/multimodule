@@ -1,6 +1,8 @@
 package org.example.domain.user.port.login.in;
 
+import org.example.domain.user.model.vo.UserInfoToken;
+
 public interface UserLoginUseCase {
 
-    void login(UserLoginQuery loginQuery);
+    UserInfoToken login(UserLoginQuery loginQuery);
 }
