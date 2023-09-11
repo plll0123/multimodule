@@ -14,7 +14,6 @@
             <option value="$PROJECT_DIR$/v2-core" />
             <option value="$PROJECT_DIR$/v2-core/article" />
             <option value="$PROJECT_DIR$/v2-core/user" />
-            <option value="$PROJECT_DIR$/v2-gateway" />
           </set>
         </option>
       </GradleProjectSettings>
